@@ -1,13 +1,8 @@
-const person = {
-  talk(){
-    var self = this;
-    setTimeout(() => {
-      //this returns a reference to the window object
-      console.log("this", this);
+const colors = ['red','green','blue'];
 
-    },1000);
-    
-  }
-};
+const items1 = colors.map(color => '<li>' + color + '</li>');
 
-person.talk();
+//A templete literal
+const items2 = colors.map(color => `<li>${color}</li>`);
+
+console.log(items2);
