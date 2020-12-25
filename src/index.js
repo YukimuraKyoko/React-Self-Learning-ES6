@@ -9,7 +9,10 @@ const person = {
 
 person.walk();
 
-const walk = person.walk;
+
+// with the bind method you can set the value of 'this' permanently
+const walk = person.walk.bind(person);
+
 //logs the walk function from person object
 console.log(walk);
 
