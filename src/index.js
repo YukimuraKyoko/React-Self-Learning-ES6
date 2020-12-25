@@ -1,6 +1,10 @@
-const first = {name: 'kyoko'};
-const second = {job: 'developer'};
+class Person {
+  constructor(name){
+    this.name = name;
+  }
+  walk(){
+    console.log("walk");
+  }
+}
 
-const combined = {...first, ...second, location:'SF'}
-
-const clone = {...first}
+const person = new Person("Kyoko");
