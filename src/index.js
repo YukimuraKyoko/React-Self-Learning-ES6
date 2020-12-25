@@ -1,8 +1,16 @@
-const colors = ['red','green','blue'];
+const address = {
+  street: '',
+  city: '',
+  country: ''
+};
+/*
+const street = address.street;
+const city = address.city;
+const country = address.country;
+*/
 
-const items1 = colors.map(color => '<li>' + color + '</li>');
+//Object Destructuring, the same as lines 7-9
+const {street, city, country} = address;
 
-//A templete literal
-const items2 = colors.map(color => `<li>${color}</li>`);
-
-console.log(items2);
+//Object Destructuring street named as 'st'
+const {street: st} = address;
