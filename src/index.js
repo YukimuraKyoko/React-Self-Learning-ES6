@@ -1,21 +1,25 @@
-const person = {
-  name: 'Kyoko',
-  walk(){
-    // logs the currect object with the name 'kyoko'
-    console.log(this);
-  },
-  talk(){}
-};
+const square1 = function(number){
+  return number * number;
+}
 
-person.walk();
+// new function syntax, more compact and cleaner
+const square2 = number => number * number;
+
+console.log(square1(3));
+
+console.log(square2(5));
 
 
-// with the bind method you can set the value of 'this' permanently
-const walk = person.walk.bind(person);
+const jobs = [
+  {id: 1, isActive: true},
+  {id: 2, isActive: true},
+  {id: 3, isActive: false},
+];
 
-//logs the walk function from person object
-console.log(walk);
 
-// this won't work, because strict mode is enabled by default
-// instead we get a window object
-walk();
+//filter iterates through the jobs array, 'job' is every single element
+//in the array, and returns of that current job is active
+const activeJobs1 = jobs.filter(function(job){ return job.isActive ;})
+
+//cleaner version of above
+const activeJobs2 = jobs.filter(job => job.isActive );
