@@ -1,11 +1,11 @@
-// var -> function
-// let -> block
-// const -> block
+const person = {
+  name: 'Kyoko',
+  walk(){},
+  talk(){}
+};
 
-function sayHello(){
-  for(let i = 0; i < 5; i++){
-    console.log(i);
-  }
-}
+person.talk();
+person.name = '';
 
-sayHello();
+const targetMember = 'name';
+person[targetMember.value] = 'John';
